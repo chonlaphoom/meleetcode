@@ -1,3 +1,4 @@
+// binary search
 function shipWithinDays(weights: number[], days: number): number {
   const lowerBound = Math.max(...weights); // use 1 days
   const highest = weights.reduce((c, v) => {

@@ -1,3 +1,4 @@
+// greedy algorithm
 function maxProfit(prices: number[]): number {
   const days = prices.length;
   if (days == 1) return 0;

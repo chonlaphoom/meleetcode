@@ -1,3 +1,4 @@
+// sliding window
 /*
  * @param {number[]} cardPoints
  * @param {number}

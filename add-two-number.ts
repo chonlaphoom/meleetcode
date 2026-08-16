@@ -1,3 +1,4 @@
+// Definition for singly-linked list.
 class ListNode {
   val: number;
   next: ListNode | null;
@@ -6,6 +7,7 @@ class ListNode {
     this.next = next === undefined ? null : next;
   }
 }
+// technique: use stack to reverse the linked list, then convert to string, then convert to BigInt, then add, then convert back to string, then convert back to linked list
 function addTwoNumbers(
   l1: ListNode | null,
   l2: ListNode | null,
