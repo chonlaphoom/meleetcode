@@ -1,39 +1,26 @@
 // use hasmap to store visited number and guard clause
+// optimize: use Floyd's cycle to find loop
 function isHappy(n: number): boolean {
-  const hashmap = new Map<number, boolean>();
-
-  let str = n.toString();
-  if (str == "1") {
-    return false;
+  let slow = getSum(n);
+  let fast = getSum(getSum(n));
+  while (slow != fast) {
+    slow = getSum(slow);
+    fast = getSum(getSum(fast));
   }
-
-  let num = 0;
-  while (1) {
-    num = getSum(str);
-    console.log(num);
-    if (num == 1) return true;
-    const circle = hashmap.get(num);
-    if (circle == true) return false;
-    hashmap.set(num, true);
-    str = num.toString();
-  }
-
-  return false;
+  return slow == 1;
 }
 
-function getSum(str: string): number {
-  return str
-    .split("")
-    .map((char) => {
-      return Number(char) * Number(char);
-    })
-    .reduce((prev, curr) => {
-      curr += prev;
-      return curr;
-    }, 0);
+function getSum(num: number): number {
+  let sum = 0;
+  let newnum = num;
+  while (newnum > 0) {
+    const digit = newnum % 10; // get last digit
+    sum = sum + digit * digit;
+    newnum = Math.floor(newnum / 10); // remove last digit
+  }
+  return sum;
 }
 
-// console.log(getSum("12"));
 console.log(isHappy(19));
 console.log(isHappy(2));
 console.log(isHappy(7));
