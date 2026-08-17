@@ -1,3 +1,4 @@
+// binary search with saperation of concerns
 function minEatingSpeed(piles: number[], h: number): number {
   let lowerBound = 1;
   let upperBound = Math.max(...piles);

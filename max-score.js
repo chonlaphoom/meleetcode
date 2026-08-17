@@ -1,4 +1,5 @@
-// sliding window
+// sliding window, get sum of first window then gradually remove
+// first value and add value
 /*
  * @param {number[]} cardPoints
  * @param {number}
