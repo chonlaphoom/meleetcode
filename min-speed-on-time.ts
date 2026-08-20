@@ -1,3 +1,4 @@
+// binary search + greedy
 function minSpeedOnTime(dist: number[], hour: number): number {
   const n = dist.length;
   if (n - 1 >= hour) return -1;
