@@ -1,3 +1,4 @@
+// use dynamic programming
 let m = new Map<number, number>();
 function climbStairs(n: number): number {
   if (n == 1) return 1;
