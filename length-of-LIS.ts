@@ -1,22 +1,22 @@
 function lengthOfLIS(nums: number[]): number {
   let streak = 1;
 
-  for (let i = 0; i < nums.length; i++) {
-    let currStreak = 1;
-    let currentval = nums[i];
-    console.log("curr", currentval);
-    for (let j = i + 1; j < nums.length; j++) {
-      if (currentval < nums[j]) {
-        console.log("cout", nums[j]);
-        currentval = nums[j];
-        currStreak++;
-      }
-    }
-    if (currStreak > streak) {
-      streak = currStreak;
-    }
-  }
-
+  // for (let i = 0; i < nums.length; i++) {
+  //   let currStreak = 1;
+  //   let currentval = nums[i];
+  //   console.log("curr", currentval);
+  //   for (let j = i + 1; j < nums.length; j++) {
+  //     if (currentval < nums[j]) {
+  //       console.log("cout", nums[j]);
+  //       currentval = nums[j];
+  //       currStreak++;
+  //     }
+  //   }
+  //   if (currStreak > streak) {
+  //     streak = currStreak;
+  //   }
+  // }
+  //
   return streak;
 }
 
