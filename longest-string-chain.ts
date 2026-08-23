@@ -1,3 +1,4 @@
+// another dynamic programming
 function longestStrChain(words: string[]): number {
   if (words.length == 1) {
     return 1;
