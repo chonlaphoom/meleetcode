@@ -1,5 +1,7 @@
+// use two pointers or use stack to clean the two strings and compare them
 function backspaceCompare(s: string, t: string): boolean {
-  return twoPointers(s, t);
+  // return twoPointers(s, t);
+  return clean(s) === clean(t);
 }
 
 function twoPointers(s: string, t: string) {
@@ -45,10 +47,21 @@ function twoPointers(s: string, t: string) {
   return true;
 }
 
-function stack(s: string, t: string) {
-  return false;
-}
-console.log(backspaceCompare("ab#c", "ad#c")); // true
-console.log(backspaceCompare("ab##", "c#d#")); // true
-console.log(backspaceCompare("a##c", "#a#c")); // true
-console.log(backspaceCompare("a#c", "b")); // false
+const clean = function (s: string) {
+  const stack = [];
+  for (const _s of s) {
+    if (_s == "#") {
+      stack.pop();
+    } else {
+      stack.push(_s);
+    }
+  }
+  console.log(stack);
+  return stack.join("");
+};
+
+// console.log(backspaceCompare("ab#c", "ad#c")); // true
+// console.log(backspaceCompare("ab##", "c#d#")); // true
+// console.log(backspaceCompare("a##c", "#a#c")); // true
+// console.log(backspaceCompare("a#c", "b")); // false
+console.log(backspaceCompare("ab#c", "ad#c")); //true
