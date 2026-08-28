@@ -60,8 +60,8 @@ const clean = function (s: string) {
   return stack.join("");
 };
 
-// console.log(backspaceCompare("ab#c", "ad#c")); // true
-// console.log(backspaceCompare("ab##", "c#d#")); // true
-// console.log(backspaceCompare("a##c", "#a#c")); // true
-// console.log(backspaceCompare("a#c", "b")); // false
+console.log(backspaceCompare("ab#c", "ad#c")); // true
+console.log(backspaceCompare("ab##", "c#d#")); // true
+console.log(backspaceCompare("a##c", "#a#c")); // true
+console.log(backspaceCompare("a#c", "b")); // false
 console.log(backspaceCompare("ab#c", "ad#c")); //true
