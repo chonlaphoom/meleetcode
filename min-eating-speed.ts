@@ -24,20 +24,6 @@ function canEat(p: number[], h: number, c: number) {
   return startHour <= h;
 }
 
-function test() {
-  console.log(minEatingSpeed([3, 6, 7, 11], 8));
-  console.log(minEatingSpeed([30, 11, 23, 4, 20], 5));
-  console.log(minEatingSpeed([30, 11, 23, 4, 20], 6));
-}
-
-test();
-/*
-Input: piles = [3,6,7,11], h = 8
-Output: 4
-
-Input: piles = [30,11,23,4,20], h = 5
-Output: 30
-
-Input: piles = [30,11,23,4,20], h = 6
-Output: 23
-*/
+console.log(minEatingSpeed([3, 6, 7, 11], 8)); // Output: 4
+console.log(minEatingSpeed([30, 11, 23, 4, 20], 5)); // Output: 30
+console.log(minEatingSpeed([30, 11, 23, 4, 20], 6)); // Output: 23
