@@ -1,3 +1,4 @@
+// use nested loops to solve, but I can optimize it to O(nlogn) by sorting the array and only checking adjacent pairs for minimum difference
 /**
  * @param {number[]} arr
  * @return {number[][]}

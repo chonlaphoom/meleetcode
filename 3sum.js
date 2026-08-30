@@ -1,3 +1,4 @@
+// use two pointers to solve and dynamic programming to avoid duplicates
 /**
  * @param {number[]} nums
  * @return {number[][]}

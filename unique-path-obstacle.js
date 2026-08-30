@@ -1,3 +1,4 @@
+// proudly use dynamic programming
 /**
  * @param {number[][]} obstacleGrid
  * @return {number}

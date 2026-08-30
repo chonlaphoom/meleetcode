@@ -1,3 +1,4 @@
+// use loop to solve and sort the array at the end
 /**
  * @param {number[]} nums
  * @return {number[]}

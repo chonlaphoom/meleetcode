@@ -1,3 +1,4 @@
+// use basic iteration with findIndex and nested loop to find the next greater element
 /**
  * @param {number[]} nums1
  * @param {number[]} nums2

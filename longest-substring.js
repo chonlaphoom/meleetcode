@@ -1,3 +1,4 @@
+// nested loop with map to find the longest substring without repeating characters, not best solution but works
 /**
  * @param {string} s
  * @return {number}
