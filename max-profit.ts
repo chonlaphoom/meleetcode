@@ -16,10 +16,6 @@ function maxProfit(prices: number[]): number {
   return maxProf;
 }
 
-function test() {
-  console.log(maxProfit([7, 1, 5, 3, 6, 4]));
-  console.log(maxProfit([7, 6, 4, 3, 1]));
-  console.log(maxProfit([1, 2]));
-}
-
-test();
+console.log(maxProfit([7, 1, 5, 3, 6, 4]));
+console.log(maxProfit([7, 6, 4, 3, 1]));
+console.log(maxProfit([1, 2]));
