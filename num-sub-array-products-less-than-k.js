@@ -1,3 +1,4 @@
+// use sliding window technique to find the number of contiguous subarrays where the product of all the elements in the subarray is less than k
 /**
  * @param {number[]} nums
  * @param {number} k

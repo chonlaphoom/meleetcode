@@ -1,3 +1,4 @@
+// use binary search to find the smallest divisor such that the sum of the division of each element in the array by the divisor is less than or equal to the threshold
 /**
  * @param {number[]} nums
  * @param {number} threshold

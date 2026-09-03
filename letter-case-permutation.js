@@ -1,4 +1,4 @@
-// use backtracking, DFS
+// use backtracking, DFS and string replacement to find all possible combinations of the string with different letter cases
 /**
  * @param {string} s
  * @return {string[]}

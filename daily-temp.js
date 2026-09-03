@@ -1,3 +1,5 @@
+// use monotonic stack and store index because we need to calculate the difference between the current index and the index of the previous temperature that is less than the current temperature
+// O(n) time complexity and O(n) space complexity
 /**
  * @param {number[]} temperatures
  * @return {number[]}
