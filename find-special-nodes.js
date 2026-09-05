@@ -26,7 +26,7 @@ var findSpecialNodes = function (n, edges) {
 
 /**
  * @param {number[][]} edges
- * @return {number[]}
+ * @return {number[][]}
  */
 var buildGraph = function (edges) {
   const graph = Array.from(
@@ -46,7 +46,7 @@ var buildGraph = function (edges) {
 
 /**
  * @param {number} start start node
- * @param {number[][]} graph
+ * @param {{ dist: number[], farIndex: number }}
  */
 var bfs = function (start, graph) {
   let dist = Array.from({ length: graph.length }, () => -1);
@@ -67,20 +67,3 @@ var bfs = function (start, graph) {
   }
   return { dist, farIndex };
 };
-
-console.log(
-  findSpecialNodes(3, [
-    [0, 1],
-    [1, 2],
-  ]),
-); // Output: "101"
-console.log(
-  findSpecialNodes(4, [
-    [0, 1],
-    [1, 2],
-    [2, 3],
-    [3, 4],
-    [3, 5],
-    [1, 6],
-  ]),
-); // Output: "1000111"
