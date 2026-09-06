@@ -67,3 +67,18 @@ var bfs = function (start, graph) {
   }
   return { dist, farIndex };
 };
+
+// 1971. Find if Path Exists in Graph
+// focus: building graph from edges, basic BFS/DFS
+//
+// 543. Diameter of Binary Tree
+// focus: diameter idea, but on binary tree structure instead of adjacency list
+//
+// 1245. Tree Diameter
+// focus: the exact “find farthest node, then BFS again” pattern
+//
+// 310. Minimum Height Trees
+// focus: tree center intuition, which connects nicely to diameter thinking
+//
+// 834. Sum of Distances in Tree
+// focus: deeper tree-distance reasoning
