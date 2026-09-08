@@ -1,3 +1,4 @@
+// use stack to store the characters and their counts
 /**
  * @param {string} s
  * @param {number} k
