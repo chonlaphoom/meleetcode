@@ -9,6 +9,7 @@ var deleteAndEarn = function (nums) {
     points[num] += num;
   }
 
+  // this become a house robber problem, where we can either take the current number and add it to the previous2 or skip it and take the previous1
   let previous2 = 0;
   let previous1 = 0;
   for (let i = 0; i <= max; i++) {
