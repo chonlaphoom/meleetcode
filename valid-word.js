@@ -1,3 +1,4 @@
+// use 2 pointers 
 /**
  * @param {string} word
  * @param {string} abbr
