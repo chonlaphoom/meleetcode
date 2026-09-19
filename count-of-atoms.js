@@ -45,7 +45,7 @@ var countOfAtoms = function (formula) {
 
     let num = 0;
     while (head < formula.length && isNumber(formula[head])) {
-      num = num * 10 + (formula.charCodeAt(head) - 48); // convert character number to number
+      num = num * 10 + (formula.charCodeAt(head) - 48); // convert character number to number by use its unicode and subrtact 48
       head++;
     }
     return num;
