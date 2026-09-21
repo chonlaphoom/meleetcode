@@ -19,11 +19,12 @@ var simplifyPath = function (path) {
     }
   }
 
-  return sim_path.join("/").length ? "/" + sim_path.join("/") : "/";
+  if(sim_path.length === 0) return "/";
+  return "/" + sim_path.join("/");
 };
 
 console.log(simplifyPath("/.../a/../b/c/../d/./")); // /.../b/d
 console.log(simplifyPath("/../")); // /
-console.log(simplifyPath("/home/user/Documents/../Pictures"));
-console.log(simplifyPath("/home//foo/"));
-console.log(simplifyPath("/home/"));
+console.log(simplifyPath("/home/user/Documents/../Pictures")); // /home/user/Pictures
+console.log(simplifyPath("/home//foo/")); // /home/foo
+console.log(simplifyPath("/home/")); // /home
