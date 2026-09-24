@@ -5,23 +5,22 @@
  */
 var threeSum = function (nums) {
   nums.sort((a, b) => a - b);
-  const ans = [];
-  const n = nums.length;
+  let triprets = [];
 
-  for (let i = 0; i < n - 2; i++) {
-    if (i > 0 && nums[i] === nums[i - 1]) continue;
-    let left = i + 1;
-    let right = n - 1;
+  for (let i = 0; i < nums.length - 2; i++) {
+    if (i > 0 && nums[i] === nums[i - 1]) continue; // avoid duplicate check at nums[i]
+
+    let left = i + 1; // next to i
+    let right = nums.length - 1; // last index
     while (left < right) {
-      let sum = nums[i] + nums[left] + nums[right];
-      if (sum == 0) {
-        ans.push([nums[i], nums[left], nums[right]]);
-        while (left + 1 < n && nums[left] === nums[left + 1]) {
-          left++;
-        }
-        while (right - 1 > 0 && nums[right] === nums[right - 1]) right--;
-        right--;
+      // no need to check i != left != right because left = i + 1, left < right
+      const sum = nums[i] + nums[left] + nums[right];
+      if (sum === 0) {
+        triprets.push([nums[i], nums[left], nums[right]]);
+        while (left < right && nums[left] === nums[left + 1]) left++;
+        while (left < right && nums[right] === nums[right - 1]) right--;
         left++;
+        right--;
       } else if (sum > 0) {
         right--;
       } else {
@@ -29,8 +28,7 @@ var threeSum = function (nums) {
       }
     }
   }
-
-  return ans;
+  return triprets;
 };
 
 console.log(threeSum([-1, 0, 1, 2, -1, -4])); // [[-1,-1,2],[-1,0,1]]
