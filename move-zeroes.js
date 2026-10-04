@@ -16,5 +16,23 @@ var moveZeroes = function (nums) {
   }
 };
 
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes_alternative = function (nums) {
+  let zeroPos = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) {
+      [nums[zeroPos], nums[i]] = [nums[i], nums[zeroPos]];
+      zeroPos++;
+    }
+  }
+  console.log(nums);
+};
+
+console.log(moveZeroes_alternative([0, 1, 0, 3, 12])); // [1,3,12,0,0]
+console.log(moveZeroes_alternative([0])); // 0
+
 console.log(moveZeroes([0, 1, 0, 3, 12])); // [1,3,12,0,0]
 console.log(moveZeroes([0])); // 0
