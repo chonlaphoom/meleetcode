@@ -1,36 +1,43 @@
-// I use stack and state
+/*
+ * time complexity: O(n)
+ * space complexity: O(n)
+ */
 /**
  * @param {string} s
  * @return {string}
  */
 var decodeString = function (s) {
-  const stack = [];
   const timeStack = [];
-  let str = "";
+  const strStack = [];
+
   let timeStr = "";
-  for (let _s of s) {
-    if (!isNaN(_s)) {
+  let strSofar = "";
+  for (_s of s) {
+    if (_s >= "0" && _s <= "9") {
       timeStr += _s;
       continue;
     }
-    if (_s == "[") {
-      timeStack.push(Number(timeStr));
-      stack.push(str); // I keep what we have sofar
-      str = "";
+
+    if (_s === "[") {
+      timeStack.push(+timeStr);
+      strStack.push(strSofar);
       timeStr = "";
-    } else if (_s == "]") {
+      strSofar = "";
+    } else if (_s === "]") {
       let time = timeStack.pop();
-      let ss = stack.pop();
-      ss += str.repeat(Number(time));
-      str = ss;
+      let str = strStack.pop();
+      str += strSofar.repeat(time);
+      strSofar = str;
     } else {
-      str += _s;
+      strSofar += _s;
     }
   }
-  return str;
+
+  return strSofar;
 };
 
-console.log(decodeString("3[a]"));
+console.log(decodeString("3[a]")); // Output: "aaa"
 console.log(decodeString("3[a]2[bc]")); // Output: "aaabcbc"
 console.log(decodeString("3[a2[c]]")); // Output: "accaccacc"
 console.log(decodeString("2[abc]3[cd]ef")); // Output: "abcabccdcdcdef"
+console.log(decodeString("3[a2[c]b]")); // Output: "accbaccbaccb"
